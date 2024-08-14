@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import {
   getMealIngredientDetails,
   instructionsExtract,
@@ -49,7 +50,14 @@ const RandomMeal = () => {
             className="max-w-56 max-h-64 mx-auto my-4 rounded-md shadow-lg"
           />
           <p className="text-center text-neutral-700 text-sm">
-            {meal.strArea} origin, {meal.strCategory} category
+            {meal.strArea} origin,{" "}
+            <Link
+              to={`/categories/${meal.strCategory}`}
+              className="hover:underline"
+            >
+              {meal.strCategory}
+            </Link>{" "}
+            category
           </p>
 
           <div className="grid min-[700px]:grid-cols-2 mt-10">

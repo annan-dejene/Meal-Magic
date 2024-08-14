@@ -18,7 +18,7 @@ const Categories = () => {
 
   return (
     <div className="max-w-7xl mx-auto p-8">
-      <h1 className="text-center text-3xl sm:text-4xl md:text-5xl text-stone-900 mb-10">
+      <h1 className="text-center text-3xl sm:text-4xl md:text-5xl text-stone-900 font-bold mb-10">
         Meal Categories
       </h1>
 
@@ -26,7 +26,7 @@ const Categories = () => {
         {!categories
           ? "Loading"
           : categories.map((category) => (
-              <Link to={`${category.idCategory}`} key={category.idCategory}>
+              <Link to={`${category.strCategory}`} key={category.idCategory}>
                 <div>
                   <img
                     src={category.strCategoryThumb}
