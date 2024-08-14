@@ -10,9 +10,9 @@ const Navbar = () => {
       </h1>
 
       <div className="flex-1 flex justify-around font-semibold">
-        <a href="/random" className="text-cyan-900 hover:text-sky-950">
+        <Link to="/random" className="text-cyan-900 hover:text-sky-950">
           Random Meal
-        </a>
+        </Link>
         <Link to="/categories" className="text-cyan-900 hover:text-sky-950">
           Categories
         </Link>
