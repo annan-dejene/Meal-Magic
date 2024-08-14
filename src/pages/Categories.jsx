@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { fetchMeals } from "../utils/fetchMeals";
 import { Link } from "react-router-dom";
+import Spinner from "../components/Spinner";
 
 const Categories = () => {
   const [categories, setCategories] = useState(null);
@@ -23,27 +24,29 @@ const Categories = () => {
       </h1>
 
       <div className="grid grid-cols-4 gap-4">
-        {!categories
-          ? "Loading"
-          : categories.map((category) => (
-              <Link to={`${category.strCategory}`} key={category.idCategory}>
-                <div>
-                  <img
-                    src={category.strCategoryThumb}
-                    alt={category.strCategory}
-                    className={
-                      category.strCategory === "Breakfast" ||
-                      category.strCategory === "Goat"
-                        ? "rounded-full w-16 h-16 sm:w-48 sm:h-48  mx-auto object-cover"
-                        : ""
-                    }
-                  />
-                </div>
-                <h2 className="text-center text-base sm:text-lg">
-                  {category.strCategory}
-                </h2>
-              </Link>
-            ))}
+        {!categories ? (
+          <Spinner />
+        ) : (
+          categories.map((category) => (
+            <Link to={`${category.strCategory}`} key={category.idCategory}>
+              <div>
+                <img
+                  src={category.strCategoryThumb}
+                  alt={category.strCategory}
+                  className={
+                    category.strCategory === "Breakfast" ||
+                    category.strCategory === "Goat"
+                      ? "rounded-full w-16 h-16 sm:w-48 sm:h-48  mx-auto object-cover"
+                      : ""
+                  }
+                />
+              </div>
+              <h2 className="text-center text-base sm:text-lg">
+                {category.strCategory}
+              </h2>
+            </Link>
+          ))
+        )}
       </div>
     </div>
   );
