@@ -8,7 +8,7 @@ const Home = () => {
   const [meals, setMeals] = useState([]);
 
   return (
-    <main className="max-w-7xl mx-auto p-8">
+    <div className="max-w-7xl mx-auto p-8">
       <SearchMeals
         searchMeal={searchMeal}
         setSearchMeal={setSearchMeal}
@@ -17,7 +17,7 @@ const Home = () => {
       />
 
       <Results meals={meals} />
-    </main>
+    </div>
   );
 };
 
