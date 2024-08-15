@@ -1,8 +1,51 @@
-# React + Vite
+[![Netlify Status](https://api.netlify.com/api/v1/badges/928ac3ea-38dc-4d74-859a-127280fd5932/deploy-status)](https://app.netlify.com/sites/magic-meal/deploys)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Meal Magic
 
-Currently, two official plugins are available:
+![Sample-MealMagic](./public/Sample.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Meal Magic is a React.js application styled with Tailwind CSS that fetches meals from the MealDB API and displays them. The application includes features such as meal search, random meal generation, and groupings by meal category and location. It uses react-router-dom for routing.
+
+## Live Demo
+
+Check out the live demo of the application [here](https://magic-meal.netlify.app/meals/52795).
+
+## Features
+
+- Search Meals: Search for meals by name.
+- Random Meal: Generate and display a random meal.
+- Categories: Browse meals by category.
+- Locations: Browse meals by location.
+- Meal Details: View detailed information about a specific meal.
+
+## Technologies Used
+
+React.js: A JavaScript library for building user interfaces.
+Tailwind CSS: A utility-first CSS framework for styling.
+React Router: A library for routing in React applications.
+MealDB API: An API providing meal data.
+
+### API
+
+This application fetches data from the MealDB's API. You can find more information about the API [here](https://www.themealdb.com/api.php).
+
+### Installation
+
+1. Clone the repo:
+
+```bash
+git clone https://github.com/your-username/meal-magic.git
+cd meal-magic
+```
+
+2. Install dependencies:
+
+```node
+npm install
+```
+
+3. Start the dev server:
+
+```node
+npm run dev
+```
