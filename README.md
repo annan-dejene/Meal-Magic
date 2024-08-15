@@ -8,7 +8,7 @@ Meal Magic is a React.js application styled with Tailwind CSS that fetches meals
 
 ## Live Demo
 
-Check out the live demo of the application [here](https://magic-meal.netlify.app/meals/52795).
+Check out the live demo of the application [here](https://magic-meal.netlify.app/).
 
 ## Features
 
