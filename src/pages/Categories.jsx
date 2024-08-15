@@ -23,11 +23,11 @@ const Categories = () => {
         Meal Categories
       </h1>
 
-      <div className="grid grid-cols-4 gap-4">
-        {!categories ? (
-          <Spinner />
-        ) : (
-          categories.map((category) => (
+      {!categories ? (
+        <Spinner className="flex flex-row min-h-screen justify-center items-center" />
+      ) : (
+        <div className="grid grid-cols-4 gap-4">
+          {categories.map((category) => (
             <Link to={`${category.strCategory}`} key={category.idCategory}>
               <div>
                 <img
@@ -45,9 +45,9 @@ const Categories = () => {
                 {category.strCategory}
               </h2>
             </Link>
-          ))
-        )}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

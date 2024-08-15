@@ -26,7 +26,7 @@ const Category = () => {
 
       <div className="mt-10 grid gap-5 grid-cols-2 sm:grid-cols-4">
         {!categoryMeal ? (
-          <Spinner />
+          <Spinner className="flex flex-row min-h-screen justify-center items-center" />
         ) : (
           categoryMeal.map((meal) => (
             <Link
