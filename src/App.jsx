@@ -6,6 +6,8 @@ import Meal from "./pages/MealPage";
 import RandomMeal from "./pages/RandomMeal";
 import Categories from "./pages/Categories";
 import Category from "./pages/Category";
+import Locations from "./pages/Locations";
+import Location from "./pages/Location";
 
 function App() {
   return (
@@ -16,7 +18,8 @@ function App() {
           <Route path="random" element={<RandomMeal />} />
           <Route path="categories" element={<Categories />} />
           <Route path="/categories/:category" element={<Category />} />
-          <Route path="locations" element={<h1>Locations</h1>} />
+          <Route path="locations" element={<Locations />} />
+          <Route path="locations/:location" element={<Location />} />
           <Route path="/meals/:id" element={<Meal />} />
           <Route path="*" element={<NotFound />} />
         </Route>
