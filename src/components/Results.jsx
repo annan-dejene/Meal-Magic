@@ -2,8 +2,6 @@
 import { Link } from "react-router-dom";
 
 const Results = ({ meals }) => {
-  const fonts = { 1: "text-3xl", 2: "text-2xl", 3: "text-xl", 4: "text-lg" };
-
   return (
     <div
       className={"mt-10 grid gap-5 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 "}
@@ -36,13 +34,7 @@ const Results = ({ meals }) => {
                 <h1
                   className={
                     "text-slate-950 " +
-                    (meals.length >= 4
-                      ? fonts[4]
-                      : meals.length === 3
-                      ? fonts[3]
-                      : meals.length === 2
-                      ? fonts[2]
-                      : fonts[1])
+                    (meals.length >= 4 ? "text-lg" : "text-xl")
                   }
                 >
                   {item.strMeal}
