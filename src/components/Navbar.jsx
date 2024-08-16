@@ -29,16 +29,16 @@ const Navbar = () => {
             Locations
           </Link>
         </div>
+
+        <div className="min-[700px]:hidden flex-3">
+          <button onClick={toggleNavBar}>
+            {mobileDrawerOpen ? <X /> : <Menu />}
+          </button>
+        </div>
       </nav>
 
-      <div className="min-[700px]:hidden fixed right-5 top-12">
-        <button onClick={toggleNavBar}>
-          {mobileDrawerOpen ? <X /> : <Menu />}
-        </button>
-      </div>
-
       {mobileDrawerOpen && (
-        <div className=" w-full mt-8  p-5 flex flex-col justify-center items-center gap-3 lg:hidden">
+        <div className=" w-full mt-8  p-5 flex flex-col justify-center items-center gap-3 min-[700px]:hidden">
           <Link
             to="/random"
             className="text-cyan-900 hover:text-sky-950 hover:underline"
