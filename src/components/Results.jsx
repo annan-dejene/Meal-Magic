@@ -6,14 +6,7 @@ const Results = ({ meals }) => {
 
   return (
     <div
-      className={
-        "mt-10 grid gap-5 grid-cols-1 " +
-        (meals.length < 3
-          ? "md:grid-cols-2"
-          : meals.length > 3
-          ? "lg:grid-cols-4 md:grid-cols-3"
-          : "md:grid-cols-3")
-      }
+      className={"mt-10 grid gap-5 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 "}
     >
       {meals.map(
         (
@@ -28,7 +21,7 @@ const Results = ({ meals }) => {
             >
               <div
                 className={
-                  "h-min w-1/2 my-5 p-4 bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105 " +
+                  "h-min w-1/2 mx-auto my-5 p-1 md:p-2 bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105 " +
                   (meals.length < 3 ? "md:w-1/2" : "md:w-full")
                 }
               >
@@ -39,7 +32,7 @@ const Results = ({ meals }) => {
                 />
               </div>
 
-              <div className="flex flex-col">
+              <div className="flex flex-col text-center md:text-left">
                 <h1
                   className={
                     "text-slate-950 " +
