@@ -49,7 +49,10 @@ const RandomMeal = () => {
             className="max-w-56 max-h-64 mx-auto my-4 rounded-md shadow-lg"
           />
           <p className="text-center text-neutral-700 text-sm">
-            {meal.strArea} origin,{" "}
+            <Link to={`/locations/${meal.strArea}`} className="hover:underline">
+              {meal.strArea}
+            </Link>{" "}
+            origin,{" "}
             <Link
               to={`/categories/${meal.strCategory}`}
               className="hover:underline"
