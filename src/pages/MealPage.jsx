@@ -5,7 +5,6 @@ import { fetchMeals } from "../utils/fetchMeals";
 import {
   getMealIngredientDetails,
   instructionsExtract,
-  getYTEmbedLink,
 } from "../utils/getMealInfo";
 import Spinner from "../components/Spinner";
 
@@ -85,38 +84,8 @@ const Meal = () => {
             </ol>
           </div>
 
-          {/* {isValidYouTubeEmbed(meal.strYoutube).then((isValid) => {
-            isValid && (
-              <div className=" aspect-h-9 mt-10">
-                <h1 className="text-3xl mb-3 text-center">
-                  Cook Along with us...
-                </h1>
-                <iframe
-                  src={getYTEmbedLink(meal.strYoutube)}
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="mx-auto w-full lg:w-[720px] lg:h-[350px] h-80"
-                ></iframe>
-              </div>
-            );
-          })} */}
-
-          {meal.strYoutube.length ? (
-            <>
-              <div className=" aspect-h-9 mt-10">
-                <h1 className="text-3xl mb-3 text-center">
-                  Cook Along with us...
-                </h1>
-                <iframe
-                  src={getYTEmbedLink(meal.strYoutube)}
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="mx-auto w-full lg:w-[720px] lg:h-[350px] h-80"
-                ></iframe>
-              </div>
-
+          {meal.strSource ? (
+            meal.strSource.length ? (
               <div className="text-center mt-4">
                 <a
                   href={meal.strSource}
@@ -126,7 +95,9 @@ const Meal = () => {
                   View Full Recipe
                 </a>
               </div>
-            </>
+            ) : (
+              ""
+            )
           ) : (
             ""
           )}
