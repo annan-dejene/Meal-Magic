@@ -34,7 +34,7 @@ This application fetches data from the MealDB's API. You can find more informati
 1. Clone the repo:
 
 ```bash
-git clone https://github.com/your-username/meal-magic.git
+git clone https://github.com/annan-dejene/Meal-Magic.git
 cd meal-magic
 ```
 
